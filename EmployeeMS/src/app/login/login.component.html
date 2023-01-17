@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6  mt-5">
+      <div class="card mt-5">
+        <div class="card-header bg-info text-center">
+          Login Form
+        </div>
+        <div class="card-body border">
+          <form #loginForm="ngForm">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-6 ">
+                <div class="mb-3 mt-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" [(ngModel)]="loginObj.UserName" class="form-control" id="username" placeholder="Username" name="username" />
+                </div>
+                <div class="mb-3 mt-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" [(ngModel)]="loginObj.Password" class="form-control" id="password" name="password" placeholder="Password"/>
+                </div>
+                <div class="mb-3 mt-3 text-center">
+                  <button type="button" class="btn btn-info" (click)="onLogin()">Login</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

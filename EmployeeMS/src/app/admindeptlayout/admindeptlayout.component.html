@@ -1,0 +1,33 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a routerLink="/admindeptdash"><i class="fas fa-tachometer-alt" style="font-size:24px; color:#ff99cc; padding-right:20px;" aria-hidden="true"></i>Dashboard</a>
+  <a routerLink="/enquiry"><i class="fas fa-question-circle" style="font-size:24px;color:#ff99cc; padding-right:20px;"></i>&nbsp;Enquiry</a>
+  <a routerLink="/course"><i class='fas fa-file-code' style='font-size:24px;color:#ff99cc; padding-right:20px;'></i>&nbsp;&nbsp;Course</a>
+  <a routerLink="/candidate"><i class='fas fa-user-alt' style='font-size:24px;color:#ff99cc; padding-right:20px;'></i>&nbsp;Candidate</a>
+  <a routerLink="/enrollment"><i class='fas fa-user-check' style='font-size:24px;color:#ff99cc; padding-right:20px;'></i>Enrollment</a>
+  <a routerLink="/payment"><i class='fas fa-rupee-sign' style='font-size:24px;color:#ff99cc; padding-right:20px;'></i>&nbsp;&nbsp;Payment</a>
+</div>
+
+<div id="main">
+  <div class="row">
+    <nav class="navbar navbar-expand-sm bg-pink navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link active" routerLink="#"><span class="text-dark" style="font-size:24px; cursor:pointer;"
+                (click)="openNav()">&#9776;</span></a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          {{username}}
+          <button type="button" class="btn btn-light mx-5" (click)="logout()"><span class="text-dark" style="cursor:pointer">Logout</span></button>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid p-5 ">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,55 @@
+.con1{
+  background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+
+}
+.con2{
+  background: linear-gradient(to right, #ff99ff 0%, #cc66ff 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+  height:80px;
+}
+
+.con3{
+  background: linear-gradient(to right, #ff99ff 0%, #ff9966 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+}
+
+.con4{
+  background: linear-gradient(to right, #ffccff 0%, #ff6699 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+}
+.con5{
+  background: linear-gradient(to right, #ccccff 0%, #00ffff 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+}
+.con6{
+  background: linear-gradient(to right, #ffccff 0%, #ff6666 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+}
+.con7{
+  background: linear-gradient(to right, #ccccff 0%, #3399ff 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+}
+
+.con8{
+  background: linear-gradient(to right, #ffcc99 0%, #ff9966 100%);
+  border-radius: 5px;
+  padding: 5px;
+  height:80px;
+}
+
+
