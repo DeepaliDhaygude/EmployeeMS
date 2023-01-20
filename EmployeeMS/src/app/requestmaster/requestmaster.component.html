@@ -1,1 +1,87 @@
-<p>requestmaster works!</p>
+<div class="row">
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header bg-warning">
+        <div class="row">
+          <div class="col text-center">
+            <h4>Requests Status</h4>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Sr</th>
+                  <th>Req Id</th>
+                  <th>Req No</th>
+                  <th>CreatedDate</th>
+                  <th>ExpDate</th>
+                  <th>CompletedDate</th>
+                  <th>Severity</th>
+                  <th>AssignedTo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of requests;let sr = index">
+                  <td>{{sr+1}}</td>
+                  <td>{{item.RequestId}}</td>
+                  <td>{{item.RequestNo}}</td>
+                  <td>{{item.CreatedDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.ExpectedEndDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.CompletedDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.Severity}}</td>
+                  <td>{{item.AssignedUserName}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-header bg-warning">
+        <div class="text-center">
+          <h4>Add Request Details</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <form requestForm="ngForm">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-12 ">
+                  <div class="mb-3 mt-3">
+                    <label for="expectedDate" class="form-label">Expected Date</label>
+                    <input type="date" [(ngModel)]="requestMasterObj.ExpectedEndDate" class="form-control" id="expectedDate" placeholder="Expected Date" name="expectedDate" />
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="severity" class="form-label">Severity</label>
+                    <input type="text" [(ngModel)]="requestMasterObj.Severity" class="form-control" id="severity" name="severity" placeholder="Severity"/>
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="deptId" class="form-label">Department</label>
+                    <select class="form-select" id="deptId" name="deptId"[(ngModel)]="requestMasterObj.DeptId">
+                      <option *ngFor="let item of departments" [value]="item.DeptId">{{item.DeptName}}</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="requestDetails" class="form-label">Request Details</label>
+                    <textarea class="form-control" rows="5" id="requestDetails" name="requestDetails"[(ngModel)]="requestMasterObj.RequestDetails" placeholder="Request Details"></textarea>
+                  </div>
+                  <div class="mb-3 mt-3 text-center">
+                    <button type="button" class="btn btn-warning" (click)="createRequestMaster()">Create</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,11 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a routerLink="/dashboard"><i class="fas fa-tachometer-alt" style="font-size:24px; color:#ffbb33; padding-right:20px;" aria-hidden="true"></i>Dashboard</a>
-  <a routerLink="/enquiry"><i class="fas fa-question-circle" style="font-size:24px;color:#ffbb33; padding-right:20px;"></i>&nbsp;Enquiry</a>
-  <a routerLink="/course"><i class='fas fa-file-code' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i>&nbsp;&nbsp;Course</a>
-  <a routerLink="/candidate"><i class='fas fa-user-alt' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i>&nbsp;Candidate</a>
-  <a routerLink="/enrollment"><i class='fas fa-user-check' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i>Enrollment</a>
-  <a routerLink="/payment"><i class='fas fa-rupee-sign' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i>&nbsp;&nbsp;Payment</a>
+  <a routerLink="/employeedash"><i class="fas fa-tachometer-alt" style="font-size:24px; color:#ffbb33; padding-right:20px;" aria-hidden="true"></i>Dashboard</a>
+  <a routerLink="/requestmaster"><i class="fas fa-question-circle" style="font-size:24px;color:#ffbb33; padding-right:20px;"></i>&nbsp;Create A Request</a>
+  <!-- <a routerLink="/assignedrequesttouser"><i class='fas fa-file-code' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i>&nbsp;&nbsp;Assigned Requests</a> -->
+  <!-- <a routerLink="/candidate"><i class='fas fa-user-alt' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i>&nbsp;</a>
+  <a routerLink="/enrollment"><i class='fas fa-user-check' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i></a>
+  <a routerLink="/payment"><i class='fas fa-rupee-sign' style='font-size:24px;color:#ffbb33; padding-right:20px;'></i>&nbsp;&nbsp;</a> -->
 </div>
 
 <div id="main">
@@ -24,9 +24,10 @@
         </div>
       </div>
     </nav>
+  </div>
     <div class="container-fluid p-5 ">
       <router-outlet></router-outlet>
     </div>
   </div>
-</div>
+
 

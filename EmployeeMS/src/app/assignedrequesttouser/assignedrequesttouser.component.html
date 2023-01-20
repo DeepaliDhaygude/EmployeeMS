@@ -1,0 +1,49 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header bg-pink">
+        <div class="row">
+          <div class="col-md-9 text-center">
+            <h4>All Assigned Requests</h4>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>RequestId</th>
+                  <th>RequestNo</th>
+                  <th>EmployeeId</th>
+                  <th>State</th>
+                  <th>CreatedDate</th>
+                  <th>ExpectedEndDate</th>
+                  <th>Severity</th>
+                  <th>CompletedDate</th>
+                  <th>AssignedUserName</th>
+                  <th>EmployeeName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of assignedRequests">
+                  <td>{{item.RequestId}}</td>
+                  <td>{{item.RequestNo}}</td>
+                  <td>{{item.EmployeeId}}</td>
+                  <td>{{item.State}}</td>
+                  <td>{{item.CreatedDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.ExpectedEndDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.Severity}}</td>
+                  <td>{{item.CompletedDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.AssignedUserName}}</td>
+                  <td>{{item.EmployeeName}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

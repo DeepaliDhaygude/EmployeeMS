@@ -4,11 +4,18 @@ import { AdminComponent } from './admin/admin.component';
 import { AdmindeptdashComponent } from './admindeptdash/admindeptdash.component';
 import { AdmindeptlayoutComponent } from './admindeptlayout/admindeptlayout.component';
 import { AdminlayoutComponent } from './adminlayout/adminlayout.component';
+import { AllrequestComponent } from './allrequest/allrequest.component';
+import { AssignedrequesttouserComponent } from './assignedrequesttouser/assignedrequesttouser.component';
+import { AssignrequestComponent } from './assignrequest/assignrequest.component';
+import { CloserequestComponent } from './closerequest/closerequest.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeedashComponent } from './employeedash/employeedash.component';
 import { EmployeelayoutComponent } from './employeelayout/employeelayout.component';
 import { LoginComponent } from './login/login.component';
+import { RequestmasterComponent } from './requestmaster/requestmaster.component';
 import { AuthGuard } from './services/auth.guard';
+import { StartRequestComponent } from './start-request/start-request.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {
@@ -32,6 +39,17 @@ const routes: Routes = [
       {
         path:'employee',
         component:EmployeeComponent
+      },
+      {
+        path:'users',
+        component: UsersComponent
+      },
+      {
+        path:'allrequest',
+        component:AllrequestComponent
+      },{
+        path:'assignrequest',
+        component:AssignrequestComponent
       }
     ]
   },
@@ -43,6 +61,18 @@ const routes: Routes = [
       {
         path: 'admindeptdash',
         component:AdmindeptdashComponent
+      },
+      {
+        path:'assignedrequesttouser',
+        component:AssignedrequesttouserComponent
+      },
+      {
+        path:'startRequest',
+        component:StartRequestComponent
+      },
+      {
+        path:'closeRequest',
+        component : CloserequestComponent
       }
     ]
   },
@@ -54,6 +84,10 @@ const routes: Routes = [
       {
         path:'employeedash',
         component:EmployeedashComponent
+      },
+      {
+        path:'requestmaster',
+        component:RequestmasterComponent
       }
     ]
   }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,13 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminlayoutComponent } from './adminlayout/adminlayout.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { RequestmasterComponent } from './requestmaster/requestmaster.component';
+import { AllrequestComponent } from './allrequest/allrequest.component';
+import { AssignrequestComponent } from './assignrequest/assignrequest.component';
+import { AssignedrequesttouserComponent } from './assignedrequesttouser/assignedrequesttouser.component';
+import { CloserequestComponent } from './closerequest/closerequest.component';
+import { StartRequestComponent } from './start-request/start-request.component';
+import { UsersComponent } from './users/users.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +34,13 @@ import { RequestmasterComponent } from './requestmaster/requestmaster.component'
     AdminComponent,
     AdminlayoutComponent,
     EmployeeComponent,
-    RequestmasterComponent
+    RequestmasterComponent,
+    AllrequestComponent,
+    AssignrequestComponent,
+    AssignedrequesttouserComponent,
+    CloserequestComponent,
+    StartRequestComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header bg-purple">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h4>All Requests</h4>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Sr</th>
+                  <th>RequestId</th>
+                  <th>RequestNo</th>
+                  <th>EmployeeId</th>
+                  <th>State</th>
+                  <th>CreatedDate</th>
+                  <th>ExpectedEndDate</th>
+                  <th>Severity</th>
+                  <th>CompletedDate</th>
+                  <th>AssignedUserName</th>
+                  <th>EmployeeName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of allRequests; let sr = index">
+                  <td>{{sr+1}}</td>
+                  <td>{{item.RequestId}}</td>
+                  <td>{{item.RequestNo}}</td>
+                  <td>{{item.EmployeeId}}</td>
+                  <td>{{item.State}}</td>
+                  <td>{{item.CreatedDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.ExpectedEndDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.Severity}}</td>
+                  <td>{{item.CompletedDate | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{item.AssignedUserName}}</td>
+                  <td>{{item.EmployeeName}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-pink">
+        <div class="text-center ">
+          <h4>Start Request</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        <form startRequestForm="ngForm">
+          <label for="requestId">Request Id</label>
+          <div class="mb-3 mt-3">
+            <input type="number" [(ngModel)]="startReqobj.RequestId" class="form-control" id="requestId" name="requestId" placeholder="Request Id">
+          </div>
+          <div class="text-center">
+            <button class="btn bg-pink" type="button" (click)="onStartRequest()">Start Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,4 +18,12 @@ export class AdminService {
   getEmployee():Observable<any[]>{
     return this.http.get<any[]>(environment.apiUrl+constant.apiEndPoint.employees);
   }
+
+  getAllRequests():Observable<any[]>{
+    return this.http.get<any[]>(environment.apiUrl + constant.apiEndPoint.getAllRequests);
+  }
+
+  assignRequest(para:any):Observable<any>{
+    return this.http.post<any>(environment.apiUrl + constant.apiEndPoint.assignRequest, para);
+  }
 }
