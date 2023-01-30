@@ -7,9 +7,12 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+  headArray : string[] = ['EmployeeId','EmployeeName','ContactNo','EmailId','CompanyId'];
+  isShow:boolean;
   employees : any;
   constructor(private adminSrv : AdminService) {
     this.employees = [];
+    this.isShow = false;
    }
 
   ngOnInit(): void {
@@ -20,5 +23,11 @@ export class EmployeeComponent implements OnInit {
     this.adminSrv.getEmployee().subscribe((result:any)=>{
       this.employees = result;
     });
+  }
+  show(){
+    this.isShow = true;
+  }
+  hide(){
+    this.isShow = false;
   }
 }

@@ -21,6 +21,7 @@ import { AssignedrequesttouserComponent } from './assignedrequesttouser/assigned
 import { CloserequestComponent } from './closerequest/closerequest.component';
 import { StartRequestComponent } from './start-request/start-request.component';
 import { UsersComponent } from './users/users.component';
+import { MyTableComponent } from './my-table/my-table.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { UsersComponent } from './users/users.component';
     AssignedrequesttouserComponent,
     CloserequestComponent,
     StartRequestComponent,
-    UsersComponent
+    UsersComponent,
+    MyTableComponent
   ],
   imports: [
     BrowserModule,

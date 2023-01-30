@@ -7,39 +7,30 @@
             Users List
           </div>
           <div class="col text-end">
-            <button type="button" class="btn btn-light">Add User</button>
+            <button type="button" class="btn btn-light" (click)="show()">Add User</button>
           </div>
         </div>
       </div>
       <div class="card-body">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Sr</th>
-              <th>UserId</th>
-              <th>Role</th>
-              <th>UserName</th>
-              <th>Password</th>
-              <th>DeptId</th>
-              <th>ReportsTo</th>
-              <th>EmpId</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of users; let sr=index">
-              <td>{{sr+1}}</td>
-              <td>{{item.UserId}}</td>
-              <td>{{item.Role}}</td>
-              <td>{{item.UserName}}</td>
-              <td>{{item.Password}}</td>
-              <td>{{item.DeptId}}</td>
-              <td>{{item.ReportsTo}}</td>
-              <td>{{item.EmployeeId}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <app-my-table [HeadArray]="headArray" [GridArray]="users"></app-my-table>
       </div>
     </div>
   </div>
+  <div class="col-md-4" *ngIf="showAddUser">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header bg-purple">
+            <div class="text-center ">
+              <h4>Add User</h4>
+              <button class="btn btn-light" (click)="hide()">Close</button>
+            </div>
+          </div>
+          <div class="card-body">
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
